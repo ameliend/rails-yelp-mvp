@@ -1,6 +1,17 @@
+<h1>Liste des restaurants</h1>
 
-<ul>
+<div class="row mt-5">
   <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %></li>
+    <div class="col-3">
+      <%=link_to restaurant_path(restaurant) do %>
+        <div class="card">
+          <img src="https://source.unsplash.com/random" alt="">
+          <h3><%=restaurant.name %></h3>
+        </div>
+      <% end %>
+    </div>
   <% end %>
-</ul>
+
+</div>
+
+

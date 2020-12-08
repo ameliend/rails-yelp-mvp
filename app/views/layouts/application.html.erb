@@ -10,6 +10,22 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-light bg-light">
+      <h3> The Spoon </h3>
+
+      <div class="blue-btn">
+        <%=link_to new_restaurant_path do %>
+          <%= "Add" %>
+          <% end  %>
+          <i class="fas fa-plus"></i>
+      </div>
+    </nav>
+
+
+    <div class="container">
+       <%= yield %>
+    </div>
+
   </body>
 </html>

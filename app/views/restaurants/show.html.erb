@@ -1,3 +1,27 @@
 <h2><%= @restaurant.name %></h2>
-<p><%= @restaurant.address %></p>
+<p>Address : <%= @restaurant.address %></p>
+<h3>Reviews</h3>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+
+
+ <%=link_to new_restaurant_review_path(@restaurant) do %>
+    <div class="blue-btn">
+      <p>Add reviews</p>
+      <i class="fas fa-plus"></i>
+    </div>
+  <% end %>
+
+  <br>
+
+<%=link_to restaurants_path do %>
+    <div class="blue-btn">
+      <i class="fas fa-undo-alt"></i>
+    </div>
+  <% end %>
+
+
 
